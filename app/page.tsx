@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { FlaskConical, Globe, HeartHandshake } from "lucide-react";
 import FadeInUp from "@/components/sections/FadeInUp";
@@ -80,14 +79,15 @@ function MeridianLines() {
 
 function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center px-6 pb-24 pt-32 md:px-12">
-      <Image
-        src="/hero-home.jpg"
-        alt=""
-        fill
-        className="object-cover"
-        priority
-      />
+    <section
+      className="relative flex min-h-screen items-center justify-center px-6 pb-24 pt-32 md:px-12"
+      style={{
+        backgroundImage: "url(/hero-home.jpg)",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="absolute inset-0 bg-navy/70" />
       <MeridianLines />
       <div className="relative z-10 mx-auto max-w-3xl text-center">
@@ -229,15 +229,6 @@ function BrandStorySection() {
             Read our full story &rarr;
           </Link>
         </div>
-
-        {/* Brand story image */}
-        <Image
-          src="/brand-story.jpg"
-          alt="Community connection"
-          width={600}
-          height={600}
-          className="rounded-2xl object-cover"
-        />
       </FadeInUp>
     </section>
   );
