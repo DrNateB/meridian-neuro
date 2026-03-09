@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { FlaskConical, Globe, HeartHandshake } from "lucide-react";
 import FadeInUp from "@/components/sections/FadeInUp";
 import ScrollIndicator from "@/components/sections/ScrollIndicator";
@@ -83,14 +82,6 @@ function HeroSection() {
     <section className="relative flex min-h-screen items-center justify-center bg-cloud px-6 pb-24 pt-32 md:px-12">
       <MeridianLines />
       <div className="relative z-10 mx-auto max-w-3xl text-center">
-        <Image
-          src="/favicon.png"
-          alt="Meridian Neuro Foundation"
-          width={425}
-          height={438}
-          className="mx-auto mb-6 h-[80px] w-auto"
-          priority
-        />
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
           501(c)(3) Nonprofit Organization
         </p>
