@@ -58,9 +58,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Meridian Neuro"
-              width={240}
-              height={60}
-              style={{ height: "56px", width: "auto" }}
+              width={884}
+              height={384}
+              style={{ height: "48px", width: "auto" }}
               priority
               onError={() => setLogoError(true)}
             />

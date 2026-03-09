@@ -86,9 +86,9 @@ function HeroSection() {
         <Image
           src="/favicon.png"
           alt="Meridian Neuro Foundation"
-          width={72}
-          height={72}
-          className="mx-auto mb-6 h-[72px] w-[72px]"
+          width={425}
+          height={438}
+          className="mx-auto mb-6 h-[80px] w-auto"
           priority
         />
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-teal">

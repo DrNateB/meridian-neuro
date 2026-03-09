@@ -28,13 +28,13 @@ export default function Footer() {
                 MERIDIAN NEURO
               </span>
             ) : (
-              <span className="inline-block rounded-lg bg-white px-4 py-2">
+              <span className="inline-block rounded-lg bg-white px-3 py-1.5">
                 <Image
                   src="/logo.png"
                   alt="Meridian Neuro"
-                  width={240}
-                  height={60}
-                  style={{ height: "52px", width: "auto" }}
+                  width={884}
+                  height={384}
+                  style={{ height: "44px", width: "auto" }}
                   onError={() => setLogoError(true)}
                 />
               </span>
