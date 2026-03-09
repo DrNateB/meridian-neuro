@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import FadeInUp from "@/components/sections/FadeInUp";
 
@@ -37,18 +38,29 @@ const METHODOLOGY_ITEMS = [
 function PageHero() {
   return (
     <section className="bg-cloud px-6 pb-20 pt-32 md:px-12">
-      <div className="mx-auto max-w-7xl">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-          Research & Standards
-        </p>
-        <h1 className="max-w-3xl text-4xl font-extrabold leading-tight text-navy md:text-5xl lg:text-6xl">
-          Building the scientific foundation neurotherapy needs.
-        </h1>
-        <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate">
-          We fund research that creates normative databases, evidence-based
-          clinical protocols, and technical specifications that elevate
-          neurotherapy practice worldwide.
-        </p>
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
+        <div>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+            Research &amp; Standards
+          </p>
+          <h1 className="text-4xl font-extrabold leading-tight text-navy md:text-5xl lg:text-6xl">
+            Building the scientific foundation neurotherapy needs.
+          </h1>
+          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate">
+            We fund research that creates normative databases, evidence-based
+            clinical protocols, and technical specifications that elevate
+            neurotherapy practice worldwide.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <Image
+            src="/hero-research.jpg"
+            alt="Neurotherapy research in practice"
+            width={600}
+            height={400}
+            className="rounded-2xl object-cover shadow-lg"
+          />
+        </div>
       </div>
     </section>
   );

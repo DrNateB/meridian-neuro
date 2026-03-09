@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { FlaskConical, Globe, HeartHandshake } from "lucide-react";
 import FadeInUp from "@/components/sections/FadeInUp";
@@ -79,18 +80,26 @@ function MeridianLines() {
 
 function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center bg-cloud px-6 pb-24 pt-32 md:px-12">
+    <section className="relative flex min-h-screen items-center justify-center px-6 pb-24 pt-32 md:px-12">
+      <Image
+        src="/hero-home.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-navy/70" />
       <MeridianLines />
       <div className="relative z-10 mx-auto max-w-3xl text-center">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-teal-light">
           501(c)(3) Nonprofit Organization
         </p>
-        <h1 className="text-4xl font-extrabold leading-tight text-navy md:text-5xl lg:text-7xl">
+        <h1 className="text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-7xl">
           Setting the Standard.
           <br />
           Expanding the Reach.
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate md:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
           Meridian Neuro Foundation advances neurotherapy through rigorous
           research, global standardization, and expanded access to evidence-based
           care for underserved communities worldwide.
@@ -98,7 +107,7 @@ function HeroSection() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/about"
-            className="inline-flex items-center justify-center rounded-full border-2 border-teal px-6 py-3 text-sm font-semibold text-teal transition-colors hover:bg-teal hover:text-white"
+            className="inline-flex items-center justify-center rounded-full border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-navy"
           >
             Our Mission
           </Link>
@@ -220,6 +229,15 @@ function BrandStorySection() {
             Read our full story &rarr;
           </Link>
         </div>
+
+        {/* Brand story image */}
+        <Image
+          src="/brand-story.jpg"
+          alt="Community connection"
+          width={600}
+          height={600}
+          className="rounded-2xl object-cover"
+        />
       </FadeInUp>
     </section>
   );

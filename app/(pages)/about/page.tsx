@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Target,
   Globe,
@@ -74,7 +75,17 @@ function PageHero() {
 function MissionVision() {
   return (
     <section className="bg-white px-6 py-24 md:px-12">
-      <FadeInUp className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
+      <FadeInUp className="mx-auto max-w-7xl">
+        <div className="mb-12 overflow-hidden rounded-2xl">
+          <Image
+            src="/mission.jpg"
+            alt="Supporting communities through neurotherapy"
+            width={1200}
+            height={500}
+            className="h-[300px] w-full object-cover md:h-[400px]"
+          />
+        </div>
+        <div className="grid gap-10 md:grid-cols-2">
         {/* Mission */}
         <div className="border-l-4 border-teal pl-6">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
@@ -96,6 +107,7 @@ function MissionVision() {
             A world where neurotherapy is accessible, standardized, and
             scientifically validated as a cornerstone of mental health treatment.
           </p>
+        </div>
         </div>
       </FadeInUp>
     </section>
@@ -181,9 +193,19 @@ function BoardSection() {
           {BOARD.map((person, i) => (
             <FadeInUp key={person.name} delay={i * 0.1}>
               <div className="rounded-2xl border border-slate/10 bg-white p-8">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-teal text-2xl font-bold text-white">
-                  {person.initial}
-                </div>
+                {person.name === "Dr. Nathan Brown" ? (
+                  <Image
+                    src="/drnathan.jpg"
+                    alt="Dr. Nathan Brown"
+                    width={56}
+                    height={56}
+                    className="mb-5 h-14 w-14 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-teal text-2xl font-bold text-white">
+                    {person.initial}
+                  </div>
+                )}
                 <h3 className="text-xl font-bold text-navy">{person.name}</h3>
                 <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal">
                   {person.role}
