@@ -8,11 +8,7 @@ import { Menu, X } from "lucide-react";
 import { DONATE_URL } from "@/lib/constants";
 
 const NAV_LINKS = [
-  { href: "/research", label: "Research" },
-  { href: "/access", label: "Access" },
-  { href: "/grants", label: "Grants" },
   { href: "/about", label: "About" },
-  { href: "/get-involved", label: "Get Involved" },
   { href: "/contact", label: "Contact" },
 ];
 

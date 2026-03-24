@@ -7,10 +7,6 @@ import Image from "next/image";
 const QUICK_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/research", label: "Research" },
-  { href: "/access", label: "Access" },
-  { href: "/grants", label: "Grants" },
-  { href: "/get-involved", label: "Get Involved" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -40,12 +36,13 @@ export default function Footer() {
               </span>
             )}
             <p className="mt-3 text-sm font-medium text-white/90">
-              Setting the standard. Expanding the reach.
+              Anchored in evidence. Global in reach.
             </p>
             <p className="mt-2 text-sm leading-relaxed text-white/70">
-              Meridian Neuro Foundation advances evidence-based neurotherapy
-              through rigorous research, expanded access to care, and grant
-              funding for practitioners and communities in need.
+              The Meridian Foundation for Neurotherapy advances neurotherapy
+              through rigorous research, practitioner training, and expanded
+              access to evidence-based care for underserved communities
+              worldwide.
             </p>
           </div>
 
@@ -95,7 +92,7 @@ export default function Footer() {
           </p>
           <p className="mt-1 text-center text-xs text-white/50">
             Meridian Foundation for Neurotherapy, operating as Meridian Neuro
-            Foundation | 501(c)(3) Nonprofit | EIN: Pending
+            Foundation &middot; 501(c)(3) Nonprofit &middot; EIN: 41-2819471
           </p>
         </div>
       </div>

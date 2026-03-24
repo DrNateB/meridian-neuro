@@ -3,40 +3,36 @@ import Link from "next/link";
 import { FlaskConical, Globe, HeartHandshake } from "lucide-react";
 import FadeInUp from "@/components/sections/FadeInUp";
 import ScrollIndicator from "@/components/sections/ScrollIndicator";
-import CountUp from "@/components/sections/CountUp";
 import { DONATE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Meridian Neuro Foundation | Setting the Standard. Expanding the Reach.",
-  description: "Meridian Neuro Foundation advances neurotherapy through rigorous research, global standardization, and expanded access to evidence-based care for underserved communities worldwide.",
+  title: "Meridian Foundation for Neurotherapy | Anchored in evidence. Global in reach.",
+  description:
+    "The Meridian Foundation for Neurotherapy advances neurotherapy through rigorous research, practitioner training, and expanded access to evidence-based care for underserved communities worldwide.",
 };
 
 const PILLARS = [
   {
     icon: FlaskConical,
-    title: "Research & Standards",
-    body: "We establish rigorous scientific protocols, normative databases, and technical specifications that elevate neurotherapy practice worldwide.",
-    href: "/research",
+    title: "Advancing the Science",
+    body: "We support rigorous research in neurotherapy — developing the normative databases, clinical protocols, and technical standards that give the field the scientific foundation it needs to mature.",
   },
   {
     icon: Globe,
-    title: "Global Access",
-    body: "We partner with communities worldwide to implement scalable, sustainable neurotherapy programs that reach underserved populations.",
-    href: "/access",
+    title: "Empowering Practitioners & Communities",
+    body: "We sponsor outreach training for clinicians and support neurotherapy services for communities in need — bringing evidence-based care to people and places that need it most.",
   },
   {
     icon: HeartHandshake,
-    title: "Direct Grants",
-    body: "We provide financial assistance to individuals and organizations removing financial barriers to neurotherapy treatment.",
-    href: "/grants",
+    title: "Championing Neurotherapy",
+    body: "We work to raise awareness of neurotherapy among healthcare practitioners and the general public — because the field's impact depends on people knowing what it can do.",
   },
 ];
 
-const STATS = [
-  { value: "3", label: "Focus Countries (Growing)" },
-  { value: "2025", label: "Launch Year" },
-  { value: "501(c)(3)", label: "Nonprofit Status" },
-  { value: "Global", label: "Research Reach" },
+const CREDIBILITY_ITEMS = [
+  { value: "501(c)(3)", label: "Independent nonprofit organization" },
+  { value: "Global", label: "Research and program reach" },
+  { value: "Founded 2026", label: "Building what the field needs now" },
 ];
 
 function MeridianLines() {
@@ -95,14 +91,14 @@ function HeroSection() {
           501(c)(3) Nonprofit Organization
         </p>
         <h1 className="text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-7xl">
-          Setting the Standard.
+          Anchored in evidence.
           <br />
-          Expanding the Reach.
+          Global in reach.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
-          Meridian Neuro Foundation advances neurotherapy through rigorous
-          research, global standardization, and expanded access to evidence-based
-          care for underserved communities worldwide.
+          The Meridian Foundation for Neurotherapy advances neurotherapy through
+          rigorous research, practitioner training, and expanded access to
+          evidence-based care for underserved communities worldwide.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
@@ -112,7 +108,7 @@ function HeroSection() {
             Our Mission
           </Link>
           <Link
-            href={DONATE_URL}
+            href="/contact"
             className="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
             Support Our Work
@@ -125,6 +121,25 @@ function HeroSection() {
   );
 }
 
+function CredibilityBar() {
+  return (
+    <section className="bg-navy px-6 py-14 md:px-12">
+      <FadeInUp className="mx-auto max-w-4xl">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+          {CREDIBILITY_ITEMS.map((item) => (
+            <div key={item.value} className="text-center">
+              <p className="text-3xl font-extrabold text-gold md:text-4xl">
+                {item.value}
+              </p>
+              <p className="mt-2 text-sm text-white/70">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </FadeInUp>
+    </section>
+  );
+}
+
 function PillarsSection() {
   return (
     <section className="bg-white px-6 py-24 md:px-12">
@@ -133,25 +148,19 @@ function PillarsSection() {
           What We Do
         </p>
         <h2 className="mx-auto mb-14 max-w-2xl text-center text-4xl font-bold text-navy">
-          Two missions. One purpose.
+          Three purposes. One foundation.
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {PILLARS.map((pillar, i) => (
             <FadeInUp key={pillar.title} delay={i * 0.1}>
-              <div className="group cursor-pointer rounded-2xl border border-slate/10 border-t-4 border-t-teal bg-cloud p-8 transition-shadow hover:shadow-lg">
+              <div className="rounded-2xl border border-slate/10 border-t-4 border-t-teal bg-cloud p-8">
                 <pillar.icon className="mb-5 h-8 w-8 text-teal" />
                 <h3 className="mb-3 text-xl font-bold text-navy">
                   {pillar.title}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed text-slate">
+                <p className="text-sm leading-relaxed text-slate">
                   {pillar.body}
                 </p>
-                <Link
-                  href={pillar.href}
-                  className="text-sm font-medium text-teal transition-colors hover:text-teal-light"
-                >
-                  Learn more &rarr;
-                </Link>
               </div>
             </FadeInUp>
           ))}
@@ -161,74 +170,71 @@ function PillarsSection() {
   );
 }
 
-function StatsSection() {
+function PullQuoteSection() {
   return (
-    <section className="bg-navy px-6 py-20 md:px-12">
-      <FadeInUp className="mx-auto max-w-5xl">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-          {STATS.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-3xl font-extrabold text-gold md:text-4xl">
-                {stat.value === "3" ? (
-                  <CountUp target={3} />
-                ) : stat.value === "2025" ? (
-                  <CountUp target={2025} />
-                ) : (
-                  stat.value
-                )}
-              </p>
-              <p className="mt-2 text-sm text-white/70">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-12 text-center text-sm italic text-white/60">
-          Building the foundation neurotherapy needs.
+    <section className="bg-cloud px-6 py-20 md:px-12">
+      <FadeInUp className="mx-auto max-w-3xl">
+        <blockquote className="border-l-4 border-teal pl-8">
+          <p className="text-xl leading-relaxed text-navy/80 md:text-2xl">
+            &ldquo;Neurotherapy has demonstrated real clinical value. The
+            field&rsquo;s problem isn&rsquo;t the science&nbsp;&mdash; it&rsquo;s
+            that the awareness of these tools and the infrastructure to support it
+            don&rsquo;t yet exist at scale, and most people in need never reach a
+            practitioner. That&rsquo;s what Meridian is here to change.&rdquo;
+          </p>
+          <cite className="mt-5 block text-sm font-medium not-italic text-slate">
+            &mdash;Nathan Brown, PhD, Chair, The Meridian Foundation for
+            Neurotherapy
+          </cite>
+        </blockquote>
+      </FadeInUp>
+    </section>
+  );
+}
+
+function NarrativeSection() {
+  return (
+    <section className="bg-white px-6 py-24 md:px-12">
+      <FadeInUp className="mx-auto max-w-3xl">
+        <h2 className="mb-6 text-3xl font-bold text-navy md:text-4xl">
+          Precision and compassion working together.
+        </h2>
+        <p className="mb-5 text-base leading-relaxed text-slate">
+          Neurotherapy is at an inflection point. The clinical evidence is
+          compelling, and the field&rsquo;s next step is building the shared
+          foundation to support scaled delivery&nbsp;&mdash; standardized
+          protocols, normative databases, and the training infrastructure to carry
+          evidence-based care into communities that have gone without it for too
+          long.
+        </p>
+        <p className="text-base leading-relaxed text-slate">
+          Meridian Foundation For Neurotherapy was created to accelerate that
+          work. We advance the science, support the practitioners, and champion
+          the field&nbsp;&mdash; so that neurotherapy reaches everyone who can
+          benefit from it.
         </p>
       </FadeInUp>
     </section>
   );
 }
 
-function BrandStorySection() {
+function EarlyMomentumSection() {
   return (
     <section className="bg-cloud px-6 py-24 md:px-12">
-      <FadeInUp className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2 md:items-center">
-        {/* Pull quote */}
-        <blockquote className="border-l-4 border-teal pl-6">
-          <p className="text-lg leading-relaxed text-navy/80 md:text-xl">
-            &ldquo;Neurotherapy has transformative potential&nbsp;&mdash; but the
-            field lacks the scientific infrastructure it needs, and most people
-            who could benefit never access care. We&rsquo;re solving both
-            problems simultaneously.&rdquo;
-          </p>
-          <cite className="mt-4 block text-sm font-medium not-italic text-slate">
-            &mdash; Meridian Neuro Foundation
-          </cite>
-        </blockquote>
-
-        {/* Story */}
-        <div>
-          <h3 className="mb-4 text-2xl font-bold text-navy">
-            Precision and compassion working together.
-          </h3>
-          <p className="mb-4 text-sm leading-relaxed text-slate">
-            Neurotherapy is one of the most promising frontiers in mental health
-            and neurological care, yet the field suffers from fragmented
-            standards, inconsistent training, and limited access&nbsp;&mdash;
-            especially in communities that need it most.
-          </p>
-          <p className="mb-6 text-sm leading-relaxed text-slate">
-            Meridian Neuro Foundation bridges that gap by pairing rigorous
-            research with direct community impact, ensuring that advances in
-            neurotherapy reach practitioners and patients everywhere.
-          </p>
-          <Link
-            href="/about"
-            className="text-sm font-medium text-teal transition-colors hover:text-teal-light"
-          >
-            Read our full story &rarr;
-          </Link>
-        </div>
+      <FadeInUp className="mx-auto max-w-3xl">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+          Where We&rsquo;re Starting
+        </p>
+        <h2 className="mb-6 text-3xl font-bold text-navy md:text-4xl">
+          The work is already underway.
+        </h2>
+        <p className="text-base leading-relaxed text-slate">
+          Meridian&rsquo;s first international program is taking shape in Kenya,
+          where we are collaborating with local healthcare professionals and
+          academics to develop a training infrastructure that can support an
+          inaugural cohort of neurotherapy practitioners serving East African
+          communities.
+        </p>
       </FadeInUp>
     </section>
   );
@@ -242,12 +248,12 @@ function CtaBanner() {
           Ready to advance neurotherapy?
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-white/80">
-          Partner with us, support our research, or help us expand access to
-          care.
+          Partner with us, support vital research, and help us expand access to
+          innovative care.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
-            href="/get-involved"
+            href="/contact"
             className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-teal transition-opacity hover:opacity-90"
           >
             Get Involved
@@ -268,9 +274,11 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <CredibilityBar />
       <PillarsSection />
-      <StatsSection />
-      <BrandStorySection />
+      <PullQuoteSection />
+      <NarrativeSection />
+      <EarlyMomentumSection />
       <CtaBanner />
     </>
   );

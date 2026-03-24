@@ -10,30 +10,31 @@ import {
 import FadeInUp from "@/components/sections/FadeInUp";
 
 export const metadata: Metadata = {
-  title: "About | Meridian Neuro Foundation",
-  description: "Learn about our mission, vision, core values, and the board of directors leading Meridian Neuro Foundation.",
+  title: "About | Meridian Foundation for Neurotherapy",
+  description:
+    "Learn about our mission, vision, core values, and the board of directors leading the Meridian Foundation for Neurotherapy.",
 };
 
 const VALUES = [
   {
     icon: Target,
     title: "Precision",
-    body: "Rigorous standards and evidence-based practices that advance scientific credibility.",
+    body: "Rigorous standards and evidence-based practices that advance the scientific credibility and effectiveness of neurotherapy.",
   },
   {
     icon: Globe,
     title: "Access",
-    body: "Quality neurotherapy should reach everyone who needs it, regardless of geography or economics.",
+    body: "Quality neurotherapy should reach everyone who needs it, regardless of geography or economic circumstances.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
-    body: "Advancing science and practice through cutting-edge research and creative solutions.",
+    body: "Advancing the science and practice of neurotherapy through cutting-edge research and creative solutions to implementation challenges.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    body: "Working across borders, disciplines, and sectors to achieve outcomes no single entity could.",
+    body: "Working across borders, disciplines, and sectors to achieve outcomes no single entity could accomplish alone.",
   },
   {
     icon: ShieldCheck,
@@ -44,11 +45,11 @@ const VALUES = [
 
 const BOARD = [
   { name: "Dr. Nathan Brown", role: "Chair", initial: "N" },
-  { name: "Heather Brown", role: "Vice Chair & Treasurer", initial: "H" },
+  { name: "Heather Newton", role: "Vice Chair & Treasurer", initial: "H" },
   { name: "Jim Hart", role: "Secretary", initial: "J" },
 ];
 
-const BADGES = ["501(c)(3) Nonprofit", "EIN: Pending", "Independent Governance"];
+const BADGES = ["501(c)(3) Nonprofit", "EIN: 41-2819471", "Independent Governance"];
 
 /* ─── Page Hero ─── */
 function PageHero() {
@@ -62,7 +63,7 @@ function PageHero() {
           Precision and compassion working together.
         </h1>
         <p className="mt-6 max-w-2xl text-xl leading-relaxed text-slate">
-          We&rsquo;re building the scientific foundation neurotherapy
+          We&rsquo;re strengthening the scientific foundation neurotherapy
           needs&nbsp;&mdash; while ensuring evidence-based care reaches every
           community that needs it.
         </p>
@@ -86,65 +87,90 @@ function MissionVision() {
           />
         </div>
         <div className="grid gap-10 md:grid-cols-2">
-        {/* Mission */}
-        <div className="border-l-4 border-teal pl-6">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-            Mission
-          </p>
-          <p className="text-lg leading-relaxed text-navy/80">
-            Meridian Neuro Foundation advances neurotherapy through rigorous
-            research, global standardization, and expanded access to
-            evidence-based care for underserved communities worldwide.
-          </p>
-        </div>
+          {/* Mission */}
+          <div className="border-l-4 border-teal pl-6">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+              Mission
+            </p>
+            <p className="text-lg leading-relaxed text-navy/80">
+              Meridian Foundation for Neurotherapy advances neurotherapy through
+              rigorous research, practitioner training, and expanded access to
+              evidence-based care for underserved communities worldwide.
+            </p>
+          </div>
 
-        {/* Vision */}
-        <div className="border-l-4 border-gold pl-6">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            Vision
-          </p>
-          <p className="text-lg leading-relaxed text-navy/80">
-            A world where neurotherapy is accessible, standardized, and
-            scientifically validated as a cornerstone of mental health treatment.
-          </p>
-        </div>
+          {/* Vision */}
+          <div className="border-l-4 border-gold pl-6">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              Vision
+            </p>
+            <p className="text-lg leading-relaxed text-navy/80">
+              A world where neurotherapy is accessible, standardized, and
+              scientifically validated as a cornerstone of mental health
+              treatment.
+            </p>
+          </div>
         </div>
       </FadeInUp>
     </section>
   );
 }
 
-/* ─── Brand Story ─── */
-function BrandStory() {
+/* ─── Why We Exist ─── */
+function WhyWeExist() {
   return (
     <section className="bg-cloud px-6 py-24 md:px-12">
-      <FadeInUp className="mx-auto max-w-7xl">
-        <h2 className="mb-8 max-w-2xl text-4xl font-bold text-navy">
-          Why Meridian Neuro Foundation exists.
+      <FadeInUp className="mx-auto max-w-3xl">
+        <h2 className="mb-8 text-3xl font-bold text-navy md:text-4xl">
+          Why the Meridian Foundation for Neurotherapy exists.
         </h2>
-        <p className="mb-4 max-w-3xl text-base leading-relaxed text-slate">
+        <p className="mb-5 text-base leading-relaxed text-slate">
           Neurotherapy has transformative potential&nbsp;&mdash; we&rsquo;ve seen
           it help people overcome anxiety, ADHD, trauma, and other challenges
-          that traditional approaches couldn&rsquo;t touch. But the field faces
-          two critical gaps.
+          where conventional approaches have often fallen short or left patients
+          without satisfying options.
         </p>
-        <p className="mb-10 max-w-3xl text-base leading-relaxed text-slate">
-          First, we lack the rigorous scientific infrastructure that established
-          medical disciplines take for granted. Second, cost and geography create
-          impossible barriers&nbsp;&mdash; cutting-edge neurotherapy concentrates
-          in wealthy urban areas while underserved communities have no access at
-          all. Meridian Neuro Foundation was created to solve both problems
-          simultaneously.
+        <p className="mb-5 text-base leading-relaxed text-slate">
+          Neurotherapy is at an inflection point. The clinical evidence is
+          compelling, and the field&rsquo;s next step is building the shared
+          foundation to match it. Standardized protocols, normative databases, and
+          technical specifications: these are the tools that established medical
+          disciplines rely on, and neurotherapy is building them now. That&rsquo;s
+          the work Meridian&rsquo;s research program exists to accelerate.
         </p>
+        <p className="mb-5 text-base leading-relaxed text-slate">
+          Effective neurotherapy has concentrated in wealthy urban centers&nbsp;&mdash;
+          but the communities carrying the greatest mental health burden are rarely
+          there. Extending that reach sustainably and at scale is the second pillar
+          of everything Meridian does.
+        </p>
+        <p className="text-base leading-relaxed text-slate">
+          And beyond research and access, the field itself needs advocates.
+          Neurotherapy&rsquo;s impact depends on practitioners knowing how to use
+          it and the public knowing it exists. Championing the field is the third
+          thing Meridian is here to do.
+        </p>
+      </FadeInUp>
+    </section>
+  );
+}
 
-        <blockquote className="max-w-3xl rounded-2xl border border-teal/30 bg-teal/5 p-8">
+/* ─── Pull Quote ─── */
+function PullQuote() {
+  return (
+    <section className="bg-white px-6 py-20 md:px-12">
+      <FadeInUp className="mx-auto max-w-3xl">
+        <blockquote className="rounded-2xl border border-teal/30 bg-teal/5 p-8 md:p-10">
           <p className="text-lg leading-relaxed text-navy/80 md:text-xl">
             &ldquo;Like the prime meridian that serves as the reference point for
-            navigation worldwide, we establish the standards that guide
-            neurotherapy practice&nbsp;&mdash; and like meridian lines that
-            circle the globe, we expand access to every region, every
-            community.&rdquo;
+            navigation worldwide, we establish the standards that guide neurotherapy
+            practice&nbsp;&mdash; and like meridian lines that circle the globe, we
+            expand access to every region, every community.&rdquo;
           </p>
+          <cite className="mt-5 block text-sm font-medium not-italic text-slate">
+            &mdash;Heather Newton, Vice Chair, The Meridian Foundation for
+            Neurotherapy
+          </cite>
         </blockquote>
       </FadeInUp>
     </section>
@@ -154,7 +180,7 @@ function BrandStory() {
 /* ─── Core Values ─── */
 function CoreValues() {
   return (
-    <section className="bg-white px-6 py-24 md:px-12">
+    <section className="bg-cloud px-6 py-24 md:px-12">
       <FadeInUp className="mx-auto max-w-7xl">
         <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-teal">
           Core Values
@@ -181,7 +207,7 @@ function CoreValues() {
 /* ─── Board of Directors ─── */
 function BoardSection() {
   return (
-    <section className="bg-cloud px-6 py-24 md:px-12">
+    <section className="bg-white px-6 py-24 md:px-12">
       <FadeInUp className="mx-auto max-w-7xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
           Leadership
@@ -192,7 +218,7 @@ function BoardSection() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {BOARD.map((person, i) => (
             <FadeInUp key={person.name} delay={i * 0.1}>
-              <div className="rounded-2xl border border-slate/10 bg-white p-8">
+              <div className="rounded-2xl border border-slate/10 bg-cloud p-8">
                 {person.name === "Dr. Nathan Brown" ? (
                   <Image
                     src="/drnathan.jpg"
@@ -228,11 +254,11 @@ function LegalSection() {
           Organizational Transparency
         </h3>
         <p className="mb-8 text-sm leading-relaxed text-white/70">
-          Meridian Neuro Foundation is the operating name of Meridian Foundation
-          for Neurotherapy, an independent 501(c)(3) nonprofit organization. We
-          collaborate with educational institutions, training organizations, and
-          professional associations to advance our charitable mission, but we are
-          not affiliated with any commercial entity.
+          The Meridian Foundation for Neurotherapy is the operating name of
+          Meridian Foundation for Neurotherapy, an independent 501(c)(3) nonprofit
+          organization. We collaborate with educational institutions, training
+          organizations, and professional associations to advance our charitable
+          mission, but we are not affiliated with any commercial entity.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           {BADGES.map((badge) => (
@@ -254,7 +280,8 @@ export default function AboutPage() {
     <>
       <PageHero />
       <MissionVision />
-      <BrandStory />
+      <WhyWeExist />
+      <PullQuote />
       <CoreValues />
       <BoardSection />
       <LegalSection />
