@@ -62,7 +62,17 @@ const BOARD = [
       "As Vice Chair and active board member at Meridian Neuro, Heather supports initiatives that broaden access to neurotherapy, including clinician training and services for underserved populations. She is dedicated to advancing the visibility of neurotherapy—engaging both healthcare professionals and the public to foster greater understanding, credibility, and adoption of these approaches in modern care.",
     ],
   },
-  { name: "Jim Hart", role: "Secretary", initial: "J" },
+  {
+    name: "Jim Hart",
+    role: "Secretary",
+    initial: "J",
+    bio: [
+      "Jim Hart is the founder and CEO of NeuFidelity, a neurotherapy company focused on advanced remote neurofeedback solutions. With more than three decades of experience across engineering, AI-driven diagnostics, and digital mental health, Jim brings rare technical depth to the clinical and operational challenges of scaling brain health care. Hart holds a BS in Engineering Management and an MBA from Southern New Hampshire University.",
+      "As a Meridian Neuro Foundation board member, Jim brings a technically-grounded neurotherapist's understanding of how emerging neurotechnology — remote delivery platforms, AI-assisted diagnostics, and low-cost EEG hardware — can extend evidence-based neurotherapy to populations and geographies that traditional clinic-based care cannot reach. Jim is committed to the Foundation's mission of making neurotherapy accessible worldwide, and to ensuring that advances in brain health science translate into real-world tools for underserved communities.",
+    ],
+    quote:
+      "The technology to deliver effective brain health care remotely already exists. The work now is getting it to the people who need it most.",
+  },
 ];
 
 const BADGES = ["501(c)(3) Nonprofit", "EIN: 41-2819471", "Independent Governance"];
@@ -260,6 +270,13 @@ function BoardSection() {
                       </p>
                     ))}
                   </div>
+                )}
+                {"quote" in person && person.quote && (
+                  <blockquote className="mt-5 border-l-4 border-teal pl-4">
+                    <p className="text-sm italic leading-relaxed text-navy/70">
+                      &ldquo;{person.quote}&rdquo;
+                    </p>
+                  </blockquote>
                 )}
               </div>
             </FadeInUp>
