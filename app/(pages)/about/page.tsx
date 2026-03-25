@@ -52,6 +52,8 @@ const BOARD = [
       "Nathan Brown, PhD, is a licensed psychologist and neurotherapist with more than four decades of clinical, academic, and consulting experience. He earned his doctorate from Fuller Graduate School of Psychology in 1985 and has since held faculty and leadership roles at Fuller and Seattle Pacific University, where he served as Dean and Associate Professor. Dr. Brown founded TrueBearing Academy in 2019 to advance the training of clinicians worldwide in the application of neurotherapy.",
       "Dr. Brown founded Meridian Neuro Foundation to address two gaps that he has observed throughout his career: the need for a dynamic standard model in conducting neurotherapy, and the chronic barriers that prevent most people who could benefit from accessing care. Dr. Brown leads the Foundation's efforts to collaborate in building standards of research and practice the field needs while expanding access to underserved communities worldwide.",
     ],
+    quote:
+      "Neurotherapy has been changing lives for decades. The problem isn't the underlying science — it's that the science hasn't reached the people who need it most. Meridian exists to assist clinicians and coaches who seek to add neurotherapy to the resources they offer their clients.",
   },
   {
     name: "Heather Newton",
