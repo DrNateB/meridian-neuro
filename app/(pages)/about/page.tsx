@@ -44,8 +44,24 @@ const VALUES = [
 ];
 
 const BOARD = [
-  { name: "Dr. Nathan Brown", role: "Chair", initial: "N" },
-  { name: "Heather Newton", role: "Vice Chair & Treasurer", initial: "H" },
+  {
+    name: "Dr. Nathan Brown",
+    role: "Chair",
+    initial: "N",
+    bio: [
+      "Nathan Brown, PhD, is a licensed psychologist and neurotherapist with more than four decades of clinical, academic, and consulting experience. He earned his doctorate from Fuller Graduate School of Psychology in 1985 and has since held faculty and leadership roles at Fuller and Seattle Pacific University, where he served as Dean and Associate Professor. Dr. Brown founded TrueBearing Academy in 2019 to advance the training of clinicians worldwide in the application of neurotherapy.",
+      "Dr. Brown founded Meridian Neuro Foundation to address two gaps that he has observed throughout his career: the need for a dynamic standard model in conducting neurotherapy, and the chronic barriers that prevent most people who could benefit from accessing care. Dr. Brown leads the Foundation's efforts to collaborate in building standards of research and practice the field needs while expanding access to underserved communities worldwide.",
+    ],
+  },
+  {
+    name: "Heather Newton",
+    role: "Vice Chair & Treasurer",
+    initial: "H",
+    bio: [
+      "Heather is a well-known neurotherapist practicing in upstate New York working with clients remotely throughout the world. A board-certified neurofeedback provider, she integrates a range of evidence-based modalities spanning brain health coaching, HRV training, and metabolic assessment. She holds a BA in Psychology from the University of Rochester and an MPA from Syracuse University's Maxwell School of Citizenship and Public Affairs.",
+      "As Vice Chair and active board member at Meridian Neuro, Heather supports initiatives that broaden access to neurotherapy, including clinician training and services for underserved populations. She is dedicated to advancing the visibility of neurotherapy—engaging both healthcare professionals and the public to foster greater understanding, credibility, and adoption of these approaches in modern care.",
+    ],
+  },
   { name: "Jim Hart", role: "Secretary", initial: "J" },
 ];
 
@@ -162,14 +178,14 @@ function PullQuote() {
       <FadeInUp className="mx-auto max-w-3xl">
         <blockquote className="rounded-2xl border border-teal/30 bg-teal/5 p-8 md:p-10">
           <p className="text-lg leading-relaxed text-navy/80 md:text-xl">
-            &ldquo;Like the prime meridian that serves as the reference point for
-            navigation worldwide, we establish the standards that guide neurotherapy
-            practice&nbsp;&mdash; and like meridian lines that circle the globe, we
-            expand access to every region, every community.&rdquo;
+            &ldquo;Neurotherapy has been changing lives for decades. The problem
+            isn&rsquo;t the underlying science&nbsp;&mdash; it&rsquo;s that the
+            science hasn&rsquo;t reached the people who need it most. Meridian
+            exists to assist clinicians and coaches who seek to add neurotherapy
+            to the resources they offer their clients.&rdquo;
           </p>
           <cite className="mt-5 block text-sm font-medium not-italic text-slate">
-            &mdash;Heather Newton, Vice Chair, The Meridian Foundation for
-            Neurotherapy
+            &mdash;Dr. Nathan Brown, Chair, Meridian Foundation for Neurotherapy
           </cite>
         </blockquote>
       </FadeInUp>
@@ -236,6 +252,15 @@ function BoardSection() {
                 <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-teal">
                   {person.role}
                 </p>
+                {"bio" in person && person.bio && (
+                  <div className="mt-4 space-y-3">
+                    {person.bio.map((paragraph, j) => (
+                      <p key={j} className="text-sm leading-relaxed text-slate">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
               </div>
             </FadeInUp>
           ))}
