@@ -9,6 +9,7 @@ import { DONATE_URL } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/about", label: "About" },
+  { href: "/initiatives", label: "Initiatives" },
   { href: "/contact", label: "Contact" },
 ];
 

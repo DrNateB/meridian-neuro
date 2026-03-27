@@ -218,23 +218,31 @@ function NarrativeSection() {
   );
 }
 
-function EarlyMomentumSection() {
+function FirstInitiativeCallout() {
   return (
     <section className="bg-cloud px-6 py-24 md:px-12">
       <FadeInUp className="mx-auto max-w-3xl">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-          Where We&rsquo;re Starting
+          First Initiative
         </p>
         <h2 className="mb-6 text-3xl font-bold text-navy md:text-4xl">
-          The work is already underway.
+          Neurotherapy, rooted in Nairobi.
         </h2>
         <p className="text-base leading-relaxed text-slate">
-          Meridian&rsquo;s first international program is taking shape in Kenya,
-          where we are collaborating with local healthcare professionals and
-          academics to develop a training infrastructure that can support an
-          inaugural cohort of neurotherapy practitioners serving East African
-          communities.
+          In May 2026, Meridian Neuro Foundation conducts its inaugural
+          international program visit to Nairobi, Kenya&nbsp;&mdash; bringing
+          neurotherapy education and clinical training to students and
+          practitioners at United States International University&ndash;Africa.
+          The visit marks the beginning of a formal academic partnership,
+          grounded in a shared conviction that the power and promise of
+          neurotherapy belongs to the mental health community worldwide.
         </p>
+        <Link
+          href="/initiatives"
+          className="mt-6 inline-block text-sm font-semibold text-teal transition-colors hover:text-teal-light"
+        >
+          Learn about the partnership &rarr;
+        </Link>
       </FadeInUp>
     </section>
   );
@@ -278,7 +286,7 @@ export default function Home() {
       <PillarsSection />
       <PullQuoteSection />
       <NarrativeSection />
-      <EarlyMomentumSection />
+      <FirstInitiativeCallout />
       <CtaBanner />
     </>
   );
