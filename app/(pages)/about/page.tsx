@@ -255,6 +255,14 @@ function BoardSection() {
                     height={56}
                     className="mb-5 h-14 w-14 rounded-full object-cover"
                   />
+                ) : person.name === "Heather Newton" ? (
+                  <Image
+                    src="/heather.png"
+                    alt="Heather Newton"
+                    width={56}
+                    height={56}
+                    className="mb-5 h-14 w-14 rounded-full object-cover"
+                  />
                 ) : (
                   <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-teal text-2xl font-bold text-white">
                     {person.initial}
