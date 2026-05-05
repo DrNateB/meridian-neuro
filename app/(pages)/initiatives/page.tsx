@@ -6,7 +6,7 @@ import FadeInUp from "@/components/sections/FadeInUp";
 export const metadata: Metadata = {
   title: "Global Initiatives | Meridian Neuro Foundation",
   description:
-    "Meridian Neuro Foundation brings neurotherapy education, clinical training, and collaborative research to academic partners worldwide. Our first initiative launches in Nairobi, Kenya with USIU-Africa.",
+    "The Meridian Foundation for Neurotherapy brings neurotherapy education, training, and research expertise into dialogue with academic and healthcare partners worldwide. Inaugural visiting-scholar engagement at USIU-Africa, Nairobi, May 2026.",
 };
 
 function PageHeader() {
@@ -20,10 +20,11 @@ function PageHeader() {
           Where the science is already at work.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-slate md:text-xl">
-          Meridian Neuro Foundation brings neurotherapy education, clinical
-          training, and collaborative research alongside academic partners who
-          have deep insight into what neurotherapy can look like in their
-          regions.
+          The Meridian Foundation for Neurotherapy brings neurotherapy
+          education, training, and expertise in research into dialogue with
+          academic partners and healthcare practitioners worldwide who have
+          deep insight into what neurotherapy may be able to provide to those
+          in need in their regions.
         </p>
       </div>
     </section>
@@ -38,7 +39,7 @@ function KenyaInitiative() {
           East Africa &middot; Nairobi, Kenya
         </p>
         <h2 className="mb-6 text-3xl font-bold text-navy md:text-4xl">
-          USIU-Africa Partnership
+          Visiting Scholar Engagement at USIU-Africa
         </h2>
 
         <div className="mb-10">
@@ -54,26 +55,24 @@ function KenyaInitiative() {
 
         <div className="space-y-5">
           <p className="text-base leading-relaxed text-slate">
-            In early 2026, Meridian Neuro Foundation established a formal
-            academic partnership with United States International
-            University&ndash;Africa (USIU-Africa), one of East Africa&rsquo;s
-            leading private universities, with accredited programs in psychology,
-            counseling, and behavioral health. Our partnership centers on
-            neurotherapy education, clinical training, and collaborative
-            inquiry&nbsp;&mdash; shaped from the outset by the distinctive
-            cultural and clinical context of mental health practice in the
-            region.
+            In May 2026, the School of Humanities and Social Sciences at
+            United States International University&ndash;Africa (USIU-Africa),
+            through its Department of Psychology, will host Dr. Nathan Brown,
+            Meridian&rsquo;s founding Chair, as a visiting scholar. USIU-Africa
+            is one of East Africa&rsquo;s leading private universities, with
+            accredited programs in psychology, counseling, and behavioral
+            health.
           </p>
           <p className="text-base leading-relaxed text-slate">
-            USIU-Africa&rsquo;s faculty and students bring deep familiarity with
-            the mental health landscape of East Africa&nbsp;&mdash; a
-            perspective that is essential to neurotherapy establishing deep and
-            meaningful roots in this region. Together, the partnership assembles
-            a training and mentoring framework, assessment tools, and a shared
-            commitment to co-developing normative standards that reflect the
-            full range of human neurodiversity and resilience. The partnership
-            also opens the door to future collaborative research and data
-            collection as the relationship matures.
+            USIU&rsquo;s invitation to Dr. Brown frames this visit to Nairobi
+            as the platform from which a deeper global collaboration may
+            emerge, focused on research and evidence-based mental health
+            neuro-based care, with the eventual aim of expanding neurotherapy
+            training to practitioners across Kenya and the wider region.
+            Neurotherapy is a new specialization here, and the host institution
+            describes the training as filling a gap where conventional
+            pharmaceutical and traditional therapeutic options are too often
+            limited and inaccessible to much of the population.
           </p>
         </div>
 
@@ -108,23 +107,27 @@ function KenyaInitiative() {
           </figure>
         </div>
 
-        <div className="mt-16">
-          <h3 className="mb-6 text-2xl font-bold text-navy">
-            Inaugural Program Visit &mdash; May 2026
-          </h3>
-          <p className="text-base leading-relaxed text-slate">
-            Dr. Nathan Brown, Meridian&rsquo;s founding Chair, will travel to
-            Nairobi in May 2026 for the partnership&rsquo;s inaugural program
-            visit. The visit is designed to reach multiple audiences and serve
-            overlapping goals: to introduce the concept and science of
-            neurotherapy to a broad academic audience; to engage clinicians and
-            graduate students in substantive conversation about what
-            neurotherapy practice looks like and what its potential holds for the
-            region; and to move beyond the conceptual entirely&nbsp;&mdash;
-            putting devices in hand and demonstrating directly how neurotherapy
-            works.
-          </p>
-        </div>
+        <p className="mt-12 text-base leading-relaxed text-slate">
+          To learn more about this visit, follow{" "}
+          <a
+            href="https://www.linkedin.com/company/meridian-neuro-foundation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-teal underline-offset-4 transition-colors hover:text-teal-light hover:underline"
+          >
+            Meridian Neuro on LinkedIn
+          </a>
+          , or Dr. Brown&rsquo;s{" "}
+          <a
+            href="https://nathanbrownphd.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-teal underline-offset-4 transition-colors hover:text-teal-light hover:underline"
+          >
+            Headstrong publication on Substack
+          </a>
+          .
+        </p>
       </FadeInUp>
     </section>
   );
