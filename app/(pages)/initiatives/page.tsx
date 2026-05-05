@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import FadeInUp from "@/components/sections/FadeInUp";
 
@@ -36,9 +37,20 @@ function KenyaInitiative() {
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
           East Africa &middot; Nairobi, Kenya
         </p>
-        <h2 className="mb-8 text-3xl font-bold text-navy md:text-4xl">
+        <h2 className="mb-6 text-3xl font-bold text-navy md:text-4xl">
           USIU-Africa Partnership
         </h2>
+
+        <div className="mb-10">
+          <Image
+            src="/usiu-africa-logo.png"
+            alt="United States International University-Africa logo"
+            width={320}
+            height={120}
+            className="h-auto w-56 md:w-64"
+            priority
+          />
+        </div>
 
         <div className="space-y-5">
           <p className="text-base leading-relaxed text-slate">
@@ -63,6 +75,37 @@ function KenyaInitiative() {
             also opens the door to future collaborative research and data
             collection as the relationship matures.
           </p>
+        </div>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <figure>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-cloud">
+              <Image
+                src="/usiu-africa-campus.png"
+                alt="USIU-Africa main campus entrance celebrating 50 Years of Academic Excellence, Nairobi, Kenya"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="mt-2 text-xs text-slate">
+              USIU-Africa main campus, Nairobi.
+            </figcaption>
+          </figure>
+          <figure>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-cloud">
+              <Image
+                src="/usiu-africa-humanities.png"
+                alt="USIU-Africa School of Humanities and Social Sciences building"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="mt-2 text-xs text-slate">
+              School of Humanities &amp; Social Sciences.
+            </figcaption>
+          </figure>
         </div>
 
         <div className="mt-16">
