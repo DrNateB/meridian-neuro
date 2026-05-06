@@ -107,6 +107,60 @@ function KenyaInitiative() {
           </figure>
         </div>
 
+        <div className="mt-16">
+          <h3 className="mb-2 text-xl font-bold text-navy md:text-2xl">
+            Public workshops during the visit
+          </h3>
+          <p className="mb-8 text-base leading-relaxed text-slate">
+            The Department of Psychology is hosting two open workshops with
+            Dr. Brown on neurotherapy and emerging brain-based approaches to
+            mental health, held at the Rooftop Lounge, School of Humanities
+            and Social Sciences.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            <figure>
+              <div className="relative aspect-square overflow-hidden rounded-lg bg-cloud">
+                <Image
+                  src="/usiu-africa-workshop-may18-undergrad.jpg"
+                  alt="USIU-Africa Department of Psychology workshop poster: Neurotherapy, Emerging Brain-Based Approaches to Mental Health, with Dr. Nathan Brown, Monday May 18, 2026, for undergraduate students"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-slate">
+                <span className="font-semibold text-navy">
+                  Monday, May 18, 2026
+                </span>{" "}
+                &middot; Undergraduate students &middot; Two sessions
+                (11:00&nbsp;AM and 2:00&nbsp;PM).
+              </figcaption>
+            </figure>
+            <figure>
+              <div className="relative aspect-square overflow-hidden rounded-lg bg-cloud">
+                <Image
+                  src="/usiu-africa-workshop-may19-faculty.jpg"
+                  alt="USIU-Africa Department of Psychology workshop poster: Neurotherapy, Emerging Brain-Based Approaches to Mental Health, with Dr. Nathan Brown, Tuesday May 19, 2026, for faculty, graduate, and doctoral students"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-slate">
+                <span className="font-semibold text-navy">
+                  Tuesday, May 19, 2026
+                </span>{" "}
+                &middot; Faculty, graduate &amp; doctoral students &middot;
+                Three sessions (9:00&nbsp;AM, 12:30&nbsp;PM, 3:00&nbsp;PM).
+              </figcaption>
+            </figure>
+          </div>
+          <p className="mt-6 text-sm text-slate">
+            Hosted by Prof. Josephine Arasa and Dr. Stella Nyagwencha,
+            Department of Psychology, USIU-Africa.
+          </p>
+        </div>
+
         <p className="mt-12 text-base leading-relaxed text-slate">
           To learn more about this visit, follow{" "}
           <a
