@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import FadeInUp from "@/components/sections/FadeInUp";
+import PosterLightbox from "@/components/sections/PosterLightbox";
 
 export const metadata: Metadata = {
   title: "Global Initiatives | Meridian Neuro Foundation",
@@ -119,15 +120,10 @@ function KenyaInitiative() {
           </p>
           <div className="grid gap-6 md:grid-cols-2">
             <figure>
-              <div className="relative aspect-square overflow-hidden rounded-lg bg-cloud">
-                <Image
-                  src="/usiu-africa-workshop-may18-undergrad.jpg"
-                  alt="USIU-Africa Department of Psychology workshop poster: Neurotherapy, Emerging Brain-Based Approaches to Mental Health, with Dr. Nathan Brown, Monday May 18, 2026, for undergraduate students"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
+              <PosterLightbox
+                src="/usiu-africa-workshop-may18-undergrad.jpg"
+                alt="USIU-Africa Department of Psychology workshop poster: Neurotherapy, Emerging Brain-Based Approaches to Mental Health, with Dr. Nathan Brown, Monday May 18, 2026, for undergraduate students"
+              />
               <figcaption className="mt-3 text-sm text-slate">
                 <span className="font-semibold text-navy">
                   Monday, May 18, 2026
@@ -137,15 +133,10 @@ function KenyaInitiative() {
               </figcaption>
             </figure>
             <figure>
-              <div className="relative aspect-square overflow-hidden rounded-lg bg-cloud">
-                <Image
-                  src="/usiu-africa-workshop-may19-faculty.jpg"
-                  alt="USIU-Africa Department of Psychology workshop poster: Neurotherapy, Emerging Brain-Based Approaches to Mental Health, with Dr. Nathan Brown, Tuesday May 19, 2026, for faculty, graduate, and doctoral students"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
+              <PosterLightbox
+                src="/usiu-africa-workshop-may19-faculty.jpg"
+                alt="USIU-Africa Department of Psychology workshop poster: Neurotherapy, Emerging Brain-Based Approaches to Mental Health, with Dr. Nathan Brown, Tuesday May 19, 2026, for faculty, graduate, and doctoral students"
+              />
               <figcaption className="mt-3 text-sm text-slate">
                 <span className="font-semibold text-navy">
                   Tuesday, May 19, 2026
